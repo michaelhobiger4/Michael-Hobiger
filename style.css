@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background: #e8e8e3;
+    font-family: Georgia, serif;
+}
+
+.newspaper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #f5f5f0;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+header {
+    text-align: center;
+    border-bottom: 3px double #1a1a1a;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Mr.M.H. - GOLD */
+h1 {
+    font-size: 60px;
+    letter-spacing: 15px;
+    margin: 0;
+    font-weight: 900;
+    color: #c9a227;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 280px 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* ORIGINAL, STIL WÄHLEN, ERGEBNIS - GOLD */
+h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #c9a227;
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: #c9a227;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.8;
+    resize: vertical;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #1a1a1a;
+}
+
+.char-counter {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #e0e0e0;
+    margin-top: 5px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar.large {
+    height: 8px;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #4a90e2;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-fill.warning {
+    background: #ff9800;
+}
+
+.progress-fill.danger {
+    background: #f44336;
+}
+
+.warning {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.style-selector {
+    margin-bottom: 20px;
+}
+
+.style-selector label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.style-selector input {
+    margin-right: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #4a90e2;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+button:hover:not(:disabled) {
+    background: #357abd;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mini-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#output {
+    min-height: 300px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.8;
+    background: #fafafa;
+}
+
+.output-progress {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.progress-text {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.ad {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #87ceeb;
+    text-align: center;
+    background: #f0f8ff;
+}
+
+.ad.featured {
+    border: 2px solid #4a90e2;
+    background: #e6f2ff;
+}
+
+.ad a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.ad a:hover {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+footer {
+    border-top: 3px double #1a1a1a;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.links {
+    margin-bottom: 20px;
+}
+
+.links a {
+    margin: 0 15px;
+    color: #1e90ff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.links a:hover {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+/* VOICETRONIX unten - DUNKELBLAU */
+.big-logo {
+    font-size: 100px;
+    letter-spacing: 30px;
+    margin: 0;
+    color: #003366;
+    font-weight: 900;
+}
+
+@media (max-width: 900px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .big-logo {
+        font-size: 50px;
+        letter-spacing: 15px;
+    }
+    
+    h1 {
+        font-size: 40px;
+        letter-spacing: 10px;
+    }
+}

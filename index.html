@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Humanisierer Mr.M.H.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="newspaper">
+        <header>
+            <div class="top-line">
+                <span>1. Ausgabe</span>
+                <span>Text Humanisierer</span>
+                <span>2026</span>
+            </div>
+            <h1>Mr.M.H.</h1>
+        </header>
+        
+        <main>
+            <div class="columns">
+                <section>
+                    <h2>Original</h2>
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="input" 
+                            maxlength="50000" 
+                            placeholder="Text hier eingeben (max. 50.000 Zeichen)..."
+                            oninput="checkLength()"
+                        ></textarea>
+                        <div class="char-counter">
+                            <span id="charCount">0</span> / 50.000 Zeichen
+                            <div class="progress-bar">
+                                <div id="progressFill" class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div id="lengthWarning" class="warning" style="display: none;">
+                            ⚠️ Text sehr lang! Wird in Abschnitten verarbeitet.
+                        </div>
+                    </div>
+                    <div class="ad">
+                        <a href="https://payhip.com/MH67">Musik Shop VOICETRONIX →</a>
+                    </div>
+                </section>
+                
+                <section class="center">
+                    <h2>Stil wählen</h2>
+                    <div class="style-selector">
+                        <label><input type="radio" name="style" value="natural" checked> Natürlich</label>
+                        <label><input type="radio" name="style" value="professional"> Professionell</label>
+                        <label><input type="radio" name="style" value="simple"> Einfach</label>
+                    </div>
+                    <button onclick="transform()" id="convertBtn">
+                        <span id="btnText">Text umwandeln →</span>
+                        <div id="btnProgress" class="btn-progress" style="display: none;">
+                            <div class="mini-spinner"></div>
+                            <span>Verarbeite...</span>
+                        </div>
+                    </button>
+                    <div class="ad featured">
+                        <a href="https://publishde.bookmundo.com/site/?r=userwebsite/index&id=mr.m.h./allbooks">Buch Shop Mr.M.H. →</a>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Ergebnis</h2>
+                    <div id="output">Hier erscheint der Text...</div>
+                    <div id="outputProgress" class="output-progress" style="display: none;">
+                        <div class="progress-text">Verarbeite Abschnitt <span id="currentChunk">1</span> von <span id="totalChunks">1</span>...</div>
+                        <div class="progress-bar large">
+                            <div id="outputProgressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="ad">
+                        <a href="http://www.redbubble.com/people/mrmhshop">Design Shop Mr.M.H. →</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="links">
+                <a href="https://payhip.com/MH67">Musik Shop Voicetronix</a>
+                <a href="https://publishde.bookmundo.com/site/?r=userwebsite/index&id=mr.m.h./allbooks">Buch Shop Mr.M.H.</a>
+                <a href="http://www.redbubble.com/people/mrmhshop">Design Shop Mr.M.H.</a>
+            </div>
+            <h2 class="big-logo">VOICETRONIX</h2>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
